@@ -43,7 +43,7 @@ class allproduct extends Component {
     this.state = {products: [],hasError: false};
   }
   async fetchData() {
-    await fetch("http://localhost:4000/models")
+    await fetch("http://localhost:3001/models")
       .then(res => res.json())
       .then(res => {this.setState({products: res})})
       .catch(err => {this.setState({hasError : true})});
